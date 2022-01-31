@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js Form</title>
+    <script type="text/javascript">
+        function basicdemo(){
+            var name=document.getElementById("t1").value;
+            console.log(name);
+            document.getElementById("temp_1").innerHTML  = name;
+            document.getElementById("temp_9").innerHTML  = name;
+            
+
+            var fathername=document.getElementById("t2").value;
+            console.log(fathername);
+            document.getElementById("temp_2").innerHTML  = fathername;
+
+            var address=document.getElementById("t3").value;
+            console.log(address);
+            document.getElementById("temp_3").innerHTML  = address;
+
+            var hmetwn=document.getElementById("t4").value;
+            console.log(hmetwn);
+            document.getElementById("temp_4").innerHTML  = hmetwn;
+
+            var city=document.getElementById("t5").value;
+            console.log(city);
+            document.getElementById("temp_5").innerHTML  = city;
+
+            var mobile=document.getElementById("t6").value;
+            console.log(mobile);
+            document.getElementById("temp_6").innerHTML  = mobile;
+
+            var emailid=document.getElementById("t7").value;
+            console.log(emailid);
+            document.getElementById("temp_7").innerHTML  = emailid;
+
+            var dob=document.getElementById("t8").value;
+            console.log(dob);
+            document.getElementById("temp_8").innerHTML  = dob;
+            
+   
+        }
+
+        var nameErr = emailErr = mobileErr = fathernmeErr = addresErr = hmetwnErr = cityErr = dobErr = true;
+    
+    // Validate name
+      
+      function checkUsername(el){
+        var name=el.value;
+        console.log(name);
+        
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
+    } else {
+        var letter = /^[a-zA-Z\s]+$/;                
+        if(letter.test(name) === false) {
+            error.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             error.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letter = false;
+            document.getElementById("temp_uname").innerHTML  = name;
+        document.getElementById("temp_thnkname").innerHTML  = name;
+        }
+    }
+    }
+
+    function printError() {
+        var error = document.getElementById("error")
+        if (isNaN(document.getElementById("t1").value)) 
+        {
+         
+            error.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            error.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    //////////////////////////////////////////////////////////////////////////////
+    function checkfathrname(el1){
+        var fathername=el1.value;
+        console.log(fathername);
+        
+    if(fathername == "") {
+        printfError("fathernmeErr", "Please enter your name");
+    } else {
+        var letterf = /^[a-zA-Z\s]+$/;                
+        if(letterf.test(fathername) === false) {
+            errorfathr.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             errorfathr.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letterf = false;
+            document.getElementById("temp_fname").innerHTML  = fathername;
+        
+        }
+    }
+    }
+    function printfError() {
+        var errorfathr = document.getElementById("errorfathr")
+        if (isNaN(document.getElementById("t2").value)) 
+        {
+         
+            errorfathr.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            errorfathr.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    ///////////////////////////////////////////////////////////////////////////
+    function checkAname(el2){
+        var address=el2.value;
+        console.log(address);
+        
+    if(address == "") {
+        printAError("addresErr", "Please enter your name");
+    } else {
+        var letterA = /^[a-zA-Z\s]+$/;                
+        if(letterA.test(address) === false) {
+            errorA.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             errorA.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letterA = false;
+            document.getElementById("temp_Aname").innerHTML  = address;
+        
+        }
+    }
+    }
+    function printAError() {
+        var errorA = document.getElementById("errorA")
+        if (isNaN(document.getElementById("t3").value)) 
+        {
+         
+            errorA.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            errorA.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    ////////////////////////////////////////////////////////////////////////////////
+    function checkHname(el3){
+        var hmetwn=el3.value;
+        console.log(hmetwn);
+        
+    if(hmetwn == "") {
+        printfError("hmetwnErr", "Please enter your name");
+    } else {
+        var letterH = /^[a-zA-Z\s]+$/;                
+        if(letterH.test(hmetwn) === false) {
+            errorH.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             errorH.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letterH = false;
+            document.getElementById("temp_Hname").innerHTML  = hmetwn;
+        
+        }
+    }
+    }
+    function printHError() {
+        var errorH= document.getElementById("errorH")
+        if (isNaN(document.getElementById("t4").value)) 
+        {
+         
+            errorH.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            errorH.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    /////////////////////////////////////////////////////////////////////
+    function checkCname(el4){
+        var city=el4.value;
+        console.log(city);
+        
+    if(city == "") {
+        printCError("hmetwnErr", "Please enter your name");
+    } else {
+        var letterC = /^[a-zA-Z\s]+$/;                
+        if(letterC.test(city) === false) {
+            errorC.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             errorC.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letterC = false;
+            document.getElementById("temp_Cname").innerHTML  = city;
+        
+        }
+    }
+    }
+    function printCError() {
+        var errorC= document.getElementById("errorC")
+        if (isNaN(document.getElementById("t5").value)) 
+        {
+         
+            errorC.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            errorC.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    ////////////////////////////////////////////////////////////////////////////
+     function checkMname(el5){
+        var mobile=el5.value;
+        console.log(mobile);
+        
+    if(mobile == "") {
+        printMError("mobileErr", "Please enter your name");
+    } else {
+        var letterM = /^\d{10}$/;                
+        if(letterM.test(mobile) === false) {
+            errorM.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             errorM.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letterM = false;
+            document.getElementById("temp_Mname").innerHTML  = mobile;
+        
+        }
+    }
+    }
+    function printMError() {
+        var errorM= document.getElementById("errorM")
+        if (isNaN(document.getElementById("t6").value)) 
+        {
+         
+            errorM.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            errorM.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    /////////////////////////////////////////////////////////////////////////////////
+    function checkEname(el6){
+        var emailid=el6.value;
+        console.log(emailid);
+        
+    if(emailid == "") {
+        printEError("emailErr", "Please enter your name");
+    } else {
+        var letterE = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/;                
+        if(letterE.test(emailid) === false) {
+            errorE.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        } else {
+             errorE.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+
+
+            letterE = false;
+            document.getElementById("temp_Ename").innerHTML  = emailid;
+        
+        }
+    }
+    }
+    function printEError() {
+        var errorE= document.getElementById("errorE")
+        if (isNaN(document.getElementById("t7").value)) 
+        {
+         
+            errorE.innerHTML = "<span style='color: green;'>"+
+                        " valid character</span>"
+        } else {
+            errorE.innerHTML = "<span style='color: red;'>"+
+                        "enter a Valid character</span>"
+        }
+    } 
+    ////////////////////////////////////////////////////////////////////////////////////
+
+    function fnCalculateAge(userDateinput){
+
+     var userDateinput = document.getElementById("t8").value;  
+     console.log(userDateinput);
+     
+     // convert user input value into date object
+     var birthDate = new Date(userDateinput);
+      console.log(" birthDate"+ birthDate);
+     
+     // get difference from current date;
+     var difference=Date.now() - birthDate.getTime(); 
+         
+     var  ageDate = new Date(difference); 
+     var calculatedAge=   Math.abs(ageDate.getUTCFullYear() - 1970);
+     console.log(calculatedAge);
+     
+     document.getElementById("temp_D_Aname").innerHTML  = calculatedAge;
+     //document.getElementById("temp_Dname").innerHTML  = userDateinput;
+     
+
+     
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+
+    </script>
+</head>
+<body style="background-color:#FFFFE0;">
+    <form>
+    <div id="main">
+        <div class="h-tag">
+            <center><h2>Basic Details-- Convergence IT Service</h2></center>
+        </div>
+    <div class="details">
+        <table cellspacing="5" cellpadding="8" align="center" border="5">
+            
+
+            <tr>
+                
+                <td align="right"> Name </td>
+                <td><label for="username">
+                    <input type="text" placeholder="Enter Name only" minlength="3" maxlength="25" onchange="checkUsername(this)" required id="t1" class="tb" pattern="/^[a-zA-Z\s]+$/" style=" font-size: 12pt; height: 18px; width:280px;"/> 
+                    <ul id="nameerr" class="input-requirements">
+                        <span id="error" onkeyup="printError()"></span>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+                </td>
+            </label>
+            </tr>
+            <tr>
+                <td align="right"> Father Name </td>
+                <td> <input type="text" placeholder="Enter Father Name only" onchange="checkfathrname(this)" required id="t2" class="tb" pattern="/^[a-zA-Z\s]+$/" style="font-size: 12pt; height: 18px; width:280px;"/> 
+                    <ul id="nameerr"class="input-requirements">
+                        <span id="errorfathr" onkeyup="printfError()"></span>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> Address </td>
+                <td> <input type="text" placeholder="Enter Address only" onchange="checkAname(this)" required id="t3" class="tb" pattern="/^[a-zA-Z\s]+$/" style="font-size: 12pt; height: 18px; width:280px;"/> 
+                    <ul  class="input-requirements">
+                        <span id="errorA" onkeyup="printAError()"></span>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> Home-Town </td>
+                <td> <input type="text" placeholder="Enter Home-Town only" onchange="checkHname(this)" required id="t4" id="t4" pattern="/^[a-zA-Z\s]+$/" class="tb" style="font-size: 12pt; height: 18px; width:280px;"/> 
+                    <ul class="input-requirements">
+                        <span id="errorH" onkeyup="printHError()"></span>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> City </td>
+                <td> <input type="text" placeholder="Enter City only" onchange="checkCname(this)" required id="t5" pattern="/^[a-zA-Z\s]+$/" id="t5" class="tb" style="font-size: 12pt; height: 18px; width:280px;"/>
+                 <ul class="input-requirements">
+                    <span id="errorC" onkeyup="printCError()"></span>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> Mobile </td>
+                <td> <input type="Number" placeholder="Enter Mobile No. only" onkeyup="checkMname(this)" required id="t6" pattern="/^\d{10}$/" id="t6" class="tb" style="font-size: 12pt; height: 18px; width:280px;" /> 
+                    <ul class="input-requirements">
+                    <span id="errorM" onkeyup="printMError()"></span>
+                    <li>Must only contain Numbers (no special characters)</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> Email-id </td>
+                <td> <input type="email" placeholder="Enter Email-id" onkeyup="checkEname(this)" required id="t7" pattern="/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/" class="tb" style="font-size: 12pt; height: 18px; width:280px;"/> 
+                    <ul class="input-requirements">
+                    <span id="errorE" onkeyup="printEError()"></span>
+                    <li>Should be Valid Email-id</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> Date Of Birth </td>
+                <td> <input type="Date" placeholder="Enter D.O.B only" onchange="fnCalculateAge(this)" required id="t8" class="tb" pattern="/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/" style="font-size: 12pt; height: 18px; width:180px;"/>
+                    <ul class="input-requirements">
+                        <span id="dobErr" onkeyup=""></span>
+                    <li>Must only contain valid D.O.B</li>
+                </ul>
+                </td>
+            </tr>
+        </table>
+        <table cellspacing="5" cellpadding="8" align="center" border="5"><br><hr>
+            <tr>
+                <td align="right"> OUTPUT </td>
+                
+            </tr>
+        </table>
+    </div></div>
+    </form>
+<br><hr>
+<p>Hi Everyone, My name is <u><b><span id="temp_uname"></span></b></u>.My Father name is <u><b><span id="temp_fname"></span></b></u>.My address is <u><b><span id="temp_Aname"></span></b></u>.My home Town is <u><b><span id="temp_Hname"></span></b></u>.My city is <u><b><span id="temp_Cname"></span></b></u>.<hr>If you want to connect with me try reaching on below given details.</p>
+<p>Mobile No:- <u><b><span id="temp_Mname"></span></b></p></u>
+<p>Email-id:- <u><b><span id="temp_Ename"></span></b></p></u>
+<p>Age:- <u><b><span id="temp_D_Aname"></span></b></p></u>
+<p>Thanking You,</p>
+<b><u><span id="temp_thnkname"></span></b></u>
+</body>
+</html>
+
+
+
+
+
+
